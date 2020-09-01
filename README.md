@@ -5,7 +5,7 @@ Home: https://github.com/ssrl-px/iota
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: IOTA: Integration Optimization, Triage and Analysis
 
