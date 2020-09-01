@@ -1,5 +1,5 @@
 {% set name = "iota" %}
-{% set version = "1.4.19" %}
+{% set version = "1.4.20" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3c1c91382bd5dc40ea53bb8efa6c2d9f1e04e2eca4db212562423cd99c811c1b
+  sha256: 657476e91d3d16b98eaf723d360547c4911329d065dda256be4e2950cdd11602
 
 build:
   noarch: python
