@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 657476e91d3d16b98eaf723d360547c4911329d065dda256be4e2950cdd11602
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - iota = iota.command_line.iota_gui_launch:entry_point
@@ -22,16 +22,18 @@ build:
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
   run:
     - numpy
     - matplotlib-base
-    - python
+    - python >={{ python_min }}
     - six
     - wxpython
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - iota
 
